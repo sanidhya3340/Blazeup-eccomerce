@@ -1,0 +1,29 @@
+.active1{  
+    text-align: center; 
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text-link {
+    color: inherit;
+    text-decoration: inherit;   
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    
+  }
+  
+  .text-link:hover{
+    
+    border-bottom: 1px ;
+  }
+
+  .text-link:hover {
+    color: #7b7fda;
+  }
+  
+  @media (max-width: 768px) {
+    .text-link{
+      padding: 0;
+    }
+  }

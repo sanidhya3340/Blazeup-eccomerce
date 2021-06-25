@@ -1,0 +1,5 @@
+@media(max-width: 600px){
+    .formSubmit{
+        width: 30vw !important;
+    }
+}

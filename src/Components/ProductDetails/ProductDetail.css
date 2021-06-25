@@ -1,0 +1,129 @@
+/* .rightSlider{
+    position: absolute;
+    font-size: 2.5em;
+    right: 11.75rem;
+    top: 45%;
+    cursor: pointer;
+    z-index: 10;
+    width: 2.5rem;
+    background: transparent;
+    transition: all 0.2s;
+    border: none;
+    
+}
+.leftSlider{
+    position: absolute;
+    text-align: center;
+    font-size: 2.5em;
+    left: 11.75rem;
+    top: 45%;
+    cursor: pointer;
+    z-index: 10;
+    width: 2.5rem;    
+    background: transparent;    
+    transition: all 0.2s;
+    border: none;
+} */
+
+
+/* .leftSlider:hover,.rightSlider:hover{
+    background: var(--btn-clr);
+    border: 2px solid var(--black-clr);
+} */
+
+
+.single-product{
+    margin-top: 80px;
+}
+
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+input:focus{
+    outline: none;
+}
+
+.single-product .fa{
+    color: #ff523b;
+    margin-left: 10px;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.qunati{
+    padding: 0.5rem 0;
+    display: block !important;
+    width: 13vw !important;
+}
+
+.col-2 .btn{
+    display: block;
+    width: 20vw;
+    margin: 1em auto;
+}
+@media (max-width: 900px)
+{
+
+    .col-2 .btn{
+        display: block;
+        width: 20vw;
+        margin: 1em auto;
+    }
+
+    .qunati{
+        padding: 0.5rem 0;
+        display: block !important;
+        width: 13vw !important;
+    }
+}
+
+@media (max-width: 600px){
+
+    .col-2 .btn{
+        display: block;
+        font-size: 0.8rem;
+        width: 30vw;
+        margin: 1em auto;
+    }
+
+    .qunati{
+        width: 25vw !important;
+    }
+}
+@media (max-width: 400px){
+    .qunati{
+        width: 30vw !important;
+    }
+}
+
+

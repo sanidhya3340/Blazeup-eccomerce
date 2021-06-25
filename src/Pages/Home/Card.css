@@ -1,0 +1,46 @@
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    width: 16em;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 237.5px;
+    height: 178.125px;
+}
+
+.col-4 p{
+    font-size: 14px;
+    text-align: start;
+    margin-top: 0.1em;
+}
+
+.rating{
+    text-align: start;
+}
+
+.rating .fa{
+    
+    color: #ff523b;
+}
+
+.col-4:hover{
+    transform: translateY(-15px);
+}
+
+.col-4 h4{
+    margin: 0;  
+    text-align: start;
+    color: #555;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.col-4 a{
+    text-decoration: none;
+    color: #555;
+}

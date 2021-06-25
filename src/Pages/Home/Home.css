@@ -1,0 +1,276 @@
+.header{
+    background-image: var(--bgPrimary);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+/*---------*/
+    
+}
+.header .row{
+    padding-top: 70px;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #563434;
+}
+
+/* Categories */
+
+.categories{
+    margin: 70px 0;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+
+
+/* Featured Categories */
+
+.title{
+    text-align: center;
+    margin: 0px auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Latest Products */
+
+.latestProduct{
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.latestRow{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 65vw;
+    margin: 0 auto;
+    overflow-x: scroll;
+    position: relative; 
+    scroll-behavior: smooth;
+    padding-left: 1em;
+}
+
+
+
+.latestRow::-webkit-scrollbar{
+    width: 5px;
+    height: 0.3rem;
+}
+
+.latestRow::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+
+.latestRow::-webkit-scrollbar-thumb {
+    background: var(--nav-clr);
+  }
+
+ .latestRow::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.rightSlider{
+    position: absolute;
+    font-size: 2.5em;
+    right: 11.75rem;
+    top: 45%;
+    cursor: pointer;
+    z-index: 10;
+    width: 2.5rem;
+    background: transparent;
+    transition: all 0.2s;
+    border: none;
+    
+}
+.leftSlider{
+    position: absolute;
+    text-align: center;
+    font-size: 2.5em;
+    left: 11.75rem;
+    top: 45%;
+    cursor: pointer;
+    z-index: 10;
+    width: 2.5rem;    
+    background: transparent;    
+    transition: all 0.2s;
+    border: none;
+}
+
+
+.leftSlider:hover,.rightSlider:hover{
+    background: var(--btn-clr);
+    border: 2px solid var(--black-clr);
+}
+    
+
+@media (max-width: 1500px){
+    .latestRow{
+        width: 68vw;
+    }
+
+   
+}
+
+@media (max-width: 1360px) and (min-width: 976px){
+    .latestRow{
+        width: 57vw;
+    }
+
+    
+}
+
+@media (max-width: 976px){
+    .leftSlider{
+        left: 7.75rem;
+    }
+    .rightSlider{
+        right: 6.75rem;
+    }
+}
+
+@media (max-width: 786px){
+    .leftSlider{
+        left: 5.75rem;
+    }
+    .rightSlider{
+        right: 5.75rem;
+    }
+}
+
+@media (max-width: 665px){
+    .leftSlider{
+        left: 4.75rem;
+    }
+    .rightSlider{
+        right: 4.75rem;
+    }
+}
+@media (max-width: 600px){
+    .leftSlider{
+        left: 3.75rem;
+    }
+    .rightSlider{
+        right: 3.75rem;
+    }
+}
+@media (max-width: 412px){
+    .leftSlider{
+        display: none;
+    }
+    .rightSlider{
+        display: none;
+    }
+}
+
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.col-2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555;
+}
+
+
+    
+
+
+/* Testimonial */
+
+.testimonial{
+    padding-top: 100px;
+}
+
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px 40px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform .5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0px;
+    color: #777;
+}
+
+.testimonial .rating{
+    text-align: center;
+}
+
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
