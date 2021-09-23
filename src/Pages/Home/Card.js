@@ -55,7 +55,7 @@ const Card = ({ Data }) => {
                     <i className="fa fa-star"></i>
                     <i className="fa fa-star-o"></i> */}
                                 </div>
-                                <p><i className="fa fa-inr"></i> {item.price}</p>
+                                <p className = "white"><i className="fa fa-inr"></i> {item.price}</p>
                             </div>
                         </Link>
                     </>

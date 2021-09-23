@@ -33,7 +33,7 @@
 .col-4 h4{
     margin: 0;  
     text-align: start;
-    color: #555;
+    color: white;
     font-weight: normal;
     letter-spacing: 0.6px;
     font-size: 1.2em;
@@ -42,5 +42,5 @@
 
 .col-4 a{
     text-decoration: none;
-    color: #555;
+    color:white;
 }

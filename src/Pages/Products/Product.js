@@ -14,7 +14,7 @@ function Product(props) {
     
 
     let append = props.appendCart;
-   // console.log(append ,"cart")
+    console.log(append ,"cart")
 
 
   
@@ -36,7 +36,7 @@ function Product(props) {
             };
 
             const sortProperty = types[type];
-           // console.log(sortProperty);
+            console.log(sortProperty);
 
             if(type === 'Low_To_High'){
                  sorted = [...ProductData].sort((a, b) =>
@@ -46,7 +46,7 @@ function Product(props) {
              sorted = [...ProductData].sort((a, b) =>
                 b[sortProperty] - a[sortProperty]);
             }
-           // console.log(sorted);
+            console.log(sorted);
             Setfilter(sorted)
         };
         sortArray(sortType)
@@ -55,7 +55,7 @@ function Product(props) {
 
 
     return (
-        <div>
+        <div >
         
 
             <div class="small-container">
@@ -106,7 +106,7 @@ function Product(props) {
 
                                         ))}
                                     </div>
-                                    <p><i className="fa fa-inr"></i> {item.price}</p>
+                                    <p className = "white"><i className="fa fa-inr"></i> {item.price}</p>
                                 </div>
                             </Link>
                         

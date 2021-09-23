@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
+
 import NumericInput from 'react-numeric-input';
 import CustomizedDialogs from '../../Components/DialogForm/DialogForm'
 import ShippingForm from '../../Components/ShippingForm/ShippingForm'
 
-
 const Card = ({data}) => {
-    
-    const [qua,setQua] = useState(data.quanti);
+    console.log(data);
+  //  const [qua,setQua] = useState(data);
+   // console.log(qua);
 
-    const price = qua*data.item.price
+    
+
+ 
     
 
     const tax = 35;
 
-    const total = qua *data.item.price + 35;
+    let total = 0;
 
     
 
@@ -29,20 +32,36 @@ const Card = ({data}) => {
                         <th>Subtotal</th>
                     </tr>
 
-                    <tr>
+
+                    {data.map((curEle,index) => {
+
+                        return(
+                        
+                        <tr>
                         <td>
                             <div class="cart-info">
-                                <img src={data.item.image} />
+                                <img src={data[index].image} />
                                 <div>
-                                    <p>{data.item.text}</p>
-                                    <small>Price: <i className="fa fa-inr"></i> {data.item.price}</small><br />
+                                    <p>{data[index].text} </p>
+                                    <small>Price: <i className="fa fa-inr"></i> {data[index].price}</small><br />
+
                                    
                                 </div>
                             </div>
                         </td>
-                        <td><NumericInput className = "qunati" onChange={setQua} min={1} value={qua} /></td>
-                        <td><i className="fa fa-inr"></i> {price}</td>
+                        <td><input className="qunati" value={data[index].value} /></td>
+                        <td><i className="fa fa-inr"></i> {data[index].price * data[index].value}</td>
+
+                        
+                        {
+                                        total = total +  data[index].price * data[index].value ,
+                                        console.log(total)
+                                    }
                     </tr>
+                        )
+                    })}
+
+                   
 
                 </table>
 
@@ -50,7 +69,7 @@ const Card = ({data}) => {
                     <table>
                         <tr>
                             <td>Subtotal</td>
-                            <td><i className="fa fa-inr"></i> {price}</td>
+                            <td><i className="fa fa-inr"></i> {total}</td>
                         </tr>
                         <tr>
                             <td>Tax</td>
@@ -58,7 +77,7 @@ const Card = ({data}) => {
                         </tr>
                         <tr>
                             <td>Total</td>
-                            <td><i className="fa fa-inr"></i> {total}</td>
+                            <td><i className="fa fa-inr"></i> {total + tax}</td>
                         </tr>
 
                     </table>
@@ -66,7 +85,7 @@ const Card = ({data}) => {
                 <div class="total-price">
 
                 <CustomizedDialogs >
-                    <ShippingForm data= {data} total = {total}></ShippingForm>
+                    <ShippingForm data= {data} total = {total + tax}></ShippingForm>
                 </CustomizedDialogs>
                     {/* <button className="btn">Proceed to checkout <i className="fa fa-inr"></i></button> */}
                 </div>

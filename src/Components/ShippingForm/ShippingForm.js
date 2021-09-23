@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react'
 import emailjs from 'emailjs-com';
 import HashLoader from "react-spinners/HashLoader"
-import './style.css' 
+import './style.css'
+ 
 
 function ShippingForm({data , total}) {
     const [loading, setLoading] = useState(false);
@@ -60,7 +61,14 @@ function ShippingForm({data , total}) {
 
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6" for="product-name">Product name</label>
-                                <input className="pa2 input-reset ba bg-transparent w-100" readonly="readonly"   value = {data.item.text}  name="product-name" id="product-name" />
+                                {
+                                    data.map((curElem , index) => {
+                                        return (
+                                            <input className="pa2 input-reset ba bg-transparent w-100" readonly="readonly"   value = {data[index].text + " (quantity : " +  data[index].value + ")"}   name="product-name" id="product-name" />
+                                        )
+                                    })
+                                }
+                               
                             </div>
 
                             <div className="mt3">
@@ -78,6 +86,7 @@ function ShippingForm({data , total}) {
                     </form>
                 </main>
             </article>
+            
         </div>
     )
 }

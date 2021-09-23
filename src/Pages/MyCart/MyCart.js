@@ -1,19 +1,27 @@
-import React,{ useState,useEffect } from 'react'
+import React from 'react'
 import './MyCart.css'
 
 import Card from './Card';
+import { useContext } from 'react';
+import { CartContext } from '../../Components/Navbar/Navbar';
 
 function MyCart(props) {
-    let data = new Object
-  //  console.log(props);
-    if(props.location.state === null)
-    {
-        data = false;
-    }
-    else{
-       data = props.location.state;
-    }
+    const {NewEntry} = useContext(CartContext);
 
+    console.log(NewEntry);
+    console.log(NewEntry.length)
+
+   //  console.log(props);
+   let data = new Object
+   if(NewEntry.length === 0)
+   {
+       data = false;
+   }
+   else{
+      data = NewEntry;
+   }
+
+   
     
 
 
@@ -24,17 +32,17 @@ function MyCart(props) {
 
     return(
         <>
-        {data ? (<Card data = {data}/>): (
+        {data ? (<Card data = {NewEntry}/>): (
             <div class="small-container cart-page" style={{background: "var(--bgPrimary)" , marginBottom: '15em'}}>
 
-                <table className ="phone">
+                <table className="phone">
                     <tr>
                         <th>Product</th>
                         <th>Quantity</th>
                         <th>Subtotal</th>
                     </tr>
                     
-                    <tr className="btn" style={{marginLeft: "15em"}}>Your Cart is Empty</tr>
+                    <tr className="btn">Your Cart is Empty</tr>
 
                 </table>
                 </div>

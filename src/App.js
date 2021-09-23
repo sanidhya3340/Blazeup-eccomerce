@@ -6,6 +6,7 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Footer from "./Components/Footer/Footer";
 import styled from "styled-components";
 import { HashRouter } from "react-router-dom";
+import { Terms } from "./Components/TermsAndCondition/Terms";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       }, 4000)
   },[])
   return (
-    <div className="App">
+    <div className="App" style ={{background : "#0D1117" , color : "white"}}>
 
     { loading ?
 
@@ -34,11 +35,7 @@ function App() {
 
     :
     (
-      
-      <HashRouter>
-        <Navbar />
-        <Footer/>
-      </HashRouter>
+        <Terms/>
     )}
 
     </div>

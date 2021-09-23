@@ -26,11 +26,11 @@ code {
 }
 
 ::-webkit-scrollbar-track{
-  background: #f1f1f1;
+  background: var(--nav-clr);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--nav-clr);
+  background: var(--white-clr);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -39,16 +39,19 @@ code {
 
 
 :root{
-  --nav-clr: linear-gradient(
+  /* --nav-clr: linear-gradient(
     50deg,
     
         #ff9671,
     #ffc75f,
     #f9f871
-  );;
+  );; */
+
+  --nav-clr : #161B22;
   --white-clr:white;
   --black-clr: black;
-  --bgPrimary : radial-gradient( circle,rgb(255, 255, 255),#ffd6d6);
+  /* --bgPrimary : radial-gradient( circle,rgb(255, 255, 255),#ffd6d6); */
+  --bgPrimary : radial-gradient( circle,rgb(177, 174, 174),#0D1117);
   --btn-clr: tomato;
   --bg-nav: rgb(255 185 101 / 93%);
 }

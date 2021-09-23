@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{useState,createContext} from "react";
 import styled from "styled-components";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { NavLink } from 'react-router-dom'
@@ -11,29 +11,49 @@ import About from "../../Pages/About/About";
 import MyCart from "../../Pages/MyCart/MyCart";
 import ProductDetail from "../ProductDetails/ProductDetail";
 import ScrollToTop from "../Scroll/ScrollToTop";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+export const CartContext = createContext();
 
 
 const Navbar = () => {
 
-  const getItem = () => {
-    return JSON.parse(localStorage.getItem("object")) || [];
-    }  
+  const [NewEntry , setNewEntery] = useState([]);
 
-  const [cart , setCart] = useState(getItem)
+  const addToCart = (e,id,image , text , price ,value)=>{
+    e.preventDefault();
   
-
-  useEffect(()=>{
-    localStorage.clear()
-   localStorage.setItem("object", JSON.stringify(cart))
-
-    //console.log(cart);
+    const newEntery = {id : id, image : image , text : text , price : price , value : value};
+  
+    console.log(id , image , text ,price ,value);
+  
+    try{
+      setNewEntery([...NewEntry , newEntery])
+      toast.success('Item added to the cart', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        });
+      
+    }
+    catch(err){
+      alert(err);
+    }
     
-  },[])
-
-  const appendCart = (item)=>{
-    setCart(...cart,item);
-   // console.log(cart);
+  
+    
+  
   }
+
+
+ 
+  
 
 
   const [IsOpen, setIsOpen] = useState(false);
@@ -41,11 +61,13 @@ const Navbar = () => {
 
 
   return (
-    <>
+    <div  >
     <ScrollToTop></ScrollToTop>
+
+    <CartContext.Provider value = {{addToCart,NewEntry}}>
       <Nav>
-        <Logo href="" >
-          <img src = {photo} width="120px"></img>
+        <Logo >
+          <img src = {photo} width="120px" style = {{filter : "invert(100%) sepia(0%) saturate(3461%) hue-rotate(321deg) brightness(98%) contrast(200%)"}}></img>
         </Logo>
 
         <Hamburger onClick={() => setIsOpen(!IsOpen)}>
@@ -84,7 +106,7 @@ const Navbar = () => {
           </span>
           <span onClick={() => setIsOpen(!IsOpen)}>
             <NavLink activeClassName="active1" className="text-link" to="/MyCart">
-            <img src= {require('./Images/cart.png').default} width="30px" height="30px"/>
+            <img src= {require('./Images/cart.png').default} style = {{filter : "invert(76%) sepia(30%) saturate(3461%) hue-rotate(321deg) brightness(98%) contrast(91%)"}} width="30px" height="30px"/>
             </NavLink>
           </span>
         </Menu>
@@ -95,7 +117,7 @@ const Navbar = () => {
         <Route path="/" exact component={Home}></Route>
         
         {/* <Route path="/Product" component={Product}></Route> */}
-        <Route path="/Product"  render={props => <Product cart={cart}  appendCart = {appendCart}/>}></Route>
+        <Route path="/Product"  render={props => <Product/>}></Route>
         
         {/* <Route path="/About" component={About}></Route> */}
         <Route path="/Contact" component={Contact}></Route>
@@ -106,12 +128,21 @@ const Navbar = () => {
 
 
       </Switch>
+      </CartContext.Provider>
 
 
+      <ToastContainer 
+        position="top-center"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+
+      />
 
 
-
-    </>
+    </div>
   )
 }
 
@@ -147,6 +178,7 @@ const Menu = styled.div`
   position: relative;
   width: 35%;
   justify-content: space-evenly;
+  color : white;
   span{
     font-size: 1em;
     

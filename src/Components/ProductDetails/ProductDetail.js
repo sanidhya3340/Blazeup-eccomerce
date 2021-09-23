@@ -1,30 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 
 import './ProductDetail.css'
 import NumericInput from 'react-numeric-input';
 
 import Card from '../../Pages/Home/Card';
 import { Link } from 'react-router-dom'
+import { CartContext } from '../Navbar/Navbar';
 
 function ProductDetail(props) {
+
+    const {item,addToCart} = useContext(CartContext);
     
     const [value,setValue] = useState(1);
 
    // console.log(value)
 
-       
-    const rightSlider = (num) => {
-        const row = document.querySelectorAll('.latestRow');
-        row[num].scrollLeft += 500;
-        // console.log(row[num]);
 
-    }
-    const leftSlider = (num) => {
-        const row = document.querySelectorAll('.latestRow');
-        row[num].scrollLeft -= 500;
-        // console.log(row[num]);
-
-    }
 
     const data = props.location.state.myArrayVariableName
 
@@ -32,7 +23,7 @@ function ProductDetail(props) {
     //console.log(props.location.state.cart, "ashdliahd")
     //console.log(props.location.state, "ashdliahd")
     return (
-        <div>
+        <div >
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
@@ -48,16 +39,19 @@ function ProductDetail(props) {
 
                         <NumericInput className = "quanti" onChange={setValue} min={1} value={value} />
 
+                        <button className = "btn" onClick = {(e) => {addToCart(e,props.location.id,props.location.state.myArrayVariableName.image ,props.location.state.myArrayVariableName.text,
+                         props.location.state.myArrayVariableName.price, value )}}>Add To Cart</button>
 
 
-                       <Link to = {{
+
+                       {/* <Link to = {{
                             pathname: '/MyCart',
                                     state: {item: data,quanti: value}
                                     
                        }}   replace
                             style={{
                                 textDecoration: 'none'
-                            }}  class="btn"> Add To Cart</Link>
+                            }}  class="btn"> Add To Cart</Link> */}
 
                         <h3>PRODUCT DETAILS <i class="fa fa-indent"></i></h3>
                         <br />
