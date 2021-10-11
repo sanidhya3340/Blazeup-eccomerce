@@ -1,11 +1,11 @@
 import React from 'react'
 import './Home.css'
 import Card from './Card'
-import { FeaturePRoduct } from './FeatureProducts/FeatureProduct';
-import { Raw } from './CatogeyWiseData/Raw';
-import { Elemnets } from './CatogeyWiseData/Elements';
-import { SlimJim } from './CatogeyWiseData/slimjim';
+
 import { Link } from 'react-router-dom'
+import { Papers } from './CatogeyWiseData/Papers';
+import {Others} from  './CatogeyWiseData/Others'
+import { Terms } from '../../Components/TermsAndCondition/Terms';
 
 
 
@@ -29,6 +29,8 @@ function Home() {
     return (
         <div style ={{background : "#0D1117"}}>
 
+
+
         
             <div className="header">
                 <div className="row">
@@ -47,7 +49,7 @@ function Home() {
                 </div>
             </div>
             {/* Categories */}
-            <div className="categories">
+            {/* <div className="categories">
                 <div className="small-container">
                     <div className="row">
                         <div className="col-3">
@@ -61,16 +63,16 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Featured Categories */}
 
-            <div className="small-container">
+            {/* <div className="small-container">
                 <h2 className="title white">Featured Products</h2>
                 <div className="row">
                     <Card Data={FeaturePRoduct} />
                 </div>
-            </div>
+            </div> */}
 
             {/* Latest Products */}
 
@@ -78,7 +80,7 @@ function Home() {
 
 
             {/* for raw categories */}
-            <h2 className="title white">Raw</h2>
+            {/* <h2 className="title white">Raw</h2>
             <div className="latestProduct">
                 <button className="leftSlider" onClick={()=>leftSlider(0)}><i className="fa fa-angle-left white" aria-hidden="true"></i></button>
                 <div className="latestRow">
@@ -86,10 +88,30 @@ function Home() {
 
                 </div>
                 <button className="rightSlider" onClick={()=>rightSlider(0)}><i className="fa fa-angle-right white" aria-hidden="true"></i></button>
+            </div> */}
+
+            <h2 className="title white">Papers</h2>
+            <div className="latestProduct">
+                <button className="leftSlider" onClick={()=>leftSlider(0)}><i className="fa fa-angle-left white" aria-hidden="true"></i></button>
+                <div className="latestRow">
+                    <Card Data={Papers} />
+
+                </div>
+                <button className="rightSlider" onClick={()=>rightSlider(0)}><i className="fa fa-angle-right white" aria-hidden="true"></i></button>
+            </div>
+
+            <h2 className="title white">Others</h2>
+            <div className="latestProduct">
+                <button className="leftSlider" onClick={()=>leftSlider(1)}><i className="fa fa-angle-left white" aria-hidden="true"></i></button>
+                <div className="latestRow">
+                    <Card Data={Others} />
+
+                </div>
+                <button className="rightSlider" onClick={()=>rightSlider(1)}><i className="fa fa-angle-right white" aria-hidden="true"></i></button>
             </div>
 
             {/* for Element categories */}
-            <h2 className="title white">Elements</h2>
+            {/* <h2 className="title white">Elements</h2>
             <div className="latestProduct">
                 <button className="leftSlider" onClick={()=>leftSlider(1)}><i className="fa fa-angle-left white" aria-hidden="true"></i></button>
                 <div className="latestRow">
@@ -98,11 +120,11 @@ function Home() {
 
                 </div>
                 <button className="rightSlider" onClick={()=>rightSlider(1)}><i className="fa fa-angle-right white" aria-hidden="true"></i></button>
-            </div>
+            </div> */}
 
 
             {/* for slimjim categories */}
-            <h2 className="title white">Slimjim</h2>
+            {/* <h2 className="title white">Slimjim</h2>
             <div className="latestProduct">
                 <button className="leftSlider" onClick={()=>leftSlider(2)}><i className="fa fa-angle-left white" aria-hidden="true"></i></button>
                 <div className="latestRow">
@@ -111,7 +133,7 @@ function Home() {
 
                 </div>
                 <button className="rightSlider" onClick={()=>rightSlider(2)}><i className="fa fa-angle-right white" aria-hidden="true"></i></button>
-            </div>
+            </div> */}
 
 
 

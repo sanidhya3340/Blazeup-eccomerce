@@ -135,7 +135,7 @@
     right: 11.75rem;
     top: 45%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 1;
     width: 2.5rem;
     background: transparent;
     transition: all 0.2s;
@@ -149,7 +149,7 @@
     left: 11.75rem;
     top: 45%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 1;
     width: 2.5rem;    
     background: transparent;    
     transition: all 0.2s;

@@ -3,6 +3,7 @@ import React from 'react'
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
 import styled from 'styled-components'
 import './FooterElement.css'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -14,7 +15,7 @@ const Footer = () => {
                 <div className = "container">
                     <div className = "foot">                       
                         <div className = "footer-col2">
-                            <img src = {require('./Images/logo.png').default} ></img>
+                            <img src = {require('../../Logo/logo2.png').default} ></img>
                             
                         </div>
                         
@@ -23,10 +24,15 @@ const Footer = () => {
                         <div className ="footer-col4">
                             <h3>Follow Us</h3>
                             <div className="links">
-                                <FaFacebook />
-                                <FaTwitter/>
+
+                                <a href = "https://www.facebook.com/profile.php?id=100073372615783">
+                                <FaFacebook/>
+                                </a>
+                               
+                                <a href= "https://www.instagram.com/blazeupindia/">
                                 <FaInstagram/>
-                                <FaYoutube/>
+                                </a>
+                                {/* <FaYoutube/> */}
                                 </div>
                             
                         </div>

@@ -6,6 +6,7 @@ import './style.css'
 
 function ShippingForm({data , total}) {
     const [loading, setLoading] = useState(false);
+    const [checker , setChecker] = useState(true);
 
     function sendEmail(e) {
 
@@ -17,6 +18,7 @@ function ShippingForm({data , total}) {
                 setLoading(false)
 
                 alert('Order Done Check Your Mail...')
+                setChecker(false);
                 // console.log(result.text);
             }, (error) => {
                 setLoading(false)
@@ -34,8 +36,14 @@ function ShippingForm({data , total}) {
         <div className="">
             <article className="mw6 center br3 pa3 pa4-ns w-100 mv3 shadow-1"  >
                 <main class="pa4 black-80">
+
+                    {checker ? (
+
                     <form class="measure center w-100" onSubmit={sendEmail}>
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0 w-100">
+
+
+                        
                             <legend className="f4 fw6 ph0 mh0">Shipping Form</legend>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6" for="name">Name</label>
@@ -83,7 +91,17 @@ function ShippingForm({data , total}) {
                             <input className="formSubmit b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Submit" />
                         </div>
 
-                    </form>
+                    </form>) :
+
+                    (
+                        <div>
+                            <h1>Your Order Is Done Now Complete The Payment Process To Get Your Order</h1>
+                            <h3>Kindely Note Down Your Full Amount Sent To Your Mail</h3>
+
+                            <a className="formSubmit b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" href="https://pages.razorpay.com/pl_I865j338eSXjat/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">Pay Now{total}</a>
+                        </div>
+                    )
+                    }
                 </main>
             </article>
             

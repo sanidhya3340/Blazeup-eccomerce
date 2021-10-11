@@ -31,7 +31,8 @@ function Contact() {
     return (
         <div className="contactConatiner">
             <div className="cent">
-                <img src={require('../Account/Images/logo1.png').default} ></img>
+                {/* <img src={require('../Account/Images/logo1.png').default} ></img> */}
+                <img src={require('../../Logo/logo1.png').default} ></img>
             </div>
             
             <div className="wrapper">

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { ProductData } from '../../ProductImages/ProductData'
+// import { ProductData } from '../../ProductImages/ProductData'
+
+// import { ProductData } from '../../ProductData';
+import { ProductData } from '../Home/CatogeyWiseData/ProductData';
 
 
 import './Product.css'
@@ -107,6 +110,7 @@ function Product(props) {
                                         ))}
                                     </div>
                                     <p className = "white"><i className="fa fa-inr"></i> {item.price}</p>
+                                    <p className = "white"> Quantity :  {item.quantity}</p>
                                 </div>
                             </Link>
                         

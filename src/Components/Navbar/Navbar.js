@@ -13,6 +13,7 @@ import ProductDetail from "../ProductDetails/ProductDetail";
 import ScrollToTop from "../Scroll/ScrollToTop";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Terms } from "../TermsAndCondition/Terms";
 
 
 export const CartContext = createContext();
@@ -57,17 +58,19 @@ const Navbar = () => {
 
 
   const [IsOpen, setIsOpen] = useState(false);
-  const photo = require('./Images/logo1.png').default;
+  const photo = require('../../Logo/logo1.png').default;
 
 
   return (
     <div  >
     <ScrollToTop></ScrollToTop>
+   
 
     <CartContext.Provider value = {{addToCart,NewEntry}}>
       <Nav>
         <Logo >
-          <img src = {photo} width="120px" style = {{filter : "invert(100%) sepia(0%) saturate(3461%) hue-rotate(321deg) brightness(98%) contrast(200%)"}}></img>
+          {/* <img src = {photo} width="120px" style = {{filter : "invert(100%) sepia(0%) saturate(3461%) hue-rotate(321deg) brightness(98%) contrast(200%)"}}></img> */}
+      <NavLink  to="/"><img src = {photo} width="120px" ></img></NavLink>
         </Logo>
 
         <Hamburger onClick={() => setIsOpen(!IsOpen)}>
@@ -87,11 +90,7 @@ const Navbar = () => {
               Products
             </NavLink>
           </span>
-          {/* <span onClick={() => setIsOpen(!IsOpen)}>
-            <NavLink activeClassName="active1" className="text-link" to="/About">
-              About
-            </NavLink>
-          </span> */}
+     
 
           <span onClick={() => setIsOpen(!IsOpen)}>
             <NavLink activeClassName="active1" className="text-link" to="/Contact">
@@ -99,11 +98,11 @@ const Navbar = () => {
             </NavLink>
           </span>
 
-          <span onClick={() => setIsOpen(!IsOpen)}>
+          {/* <span onClick={() => setIsOpen(!IsOpen)}>
             <NavLink activeClassName="active1" className="text-link" to="/Account">
               Account
             </NavLink>
-          </span>
+          </span> */}
           <span onClick={() => setIsOpen(!IsOpen)}>
             <NavLink activeClassName="active1" className="text-link" to="/MyCart">
             <img src= {require('./Images/cart.png').default} style = {{filter : "invert(76%) sepia(30%) saturate(3461%) hue-rotate(321deg) brightness(98%) contrast(91%)"}} width="30px" height="30px"/>
@@ -121,7 +120,7 @@ const Navbar = () => {
         
         {/* <Route path="/About" component={About}></Route> */}
         <Route path="/Contact" component={Contact}></Route>
-        <Route path="/Account" component={Account}></Route>
+        {/* <Route path="/Account" component={Account}></Route> */}
         <Route path="/ProductDetail" component={ProductDetail}></Route>
        
         <Route path="/MyCart" component={MyCart}></Route>
@@ -192,9 +191,9 @@ const Menu = styled.div`
      overflow: hidden;
     flex-direction: column;
     width: 100%;
-    max-height: ${({ IsOpen }) => (IsOpen ? "200vh" : "0px")};
-    transition: max-height 0.4s ease-in;
-    background: var(--bg-nav);
+    height: ${({ IsOpen }) => (IsOpen ? "100vh" : "0px")};
+    transition: height 0.4s ease-in;
+    background:   black;
     span{
       padding: 1em 0;
       color: var(--white-clr);

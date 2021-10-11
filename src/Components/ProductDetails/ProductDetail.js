@@ -13,11 +13,11 @@ function ProductDetail(props) {
     
     const [value,setValue] = useState(1);
 
-   // console.log(value)
+    console.log(props.location.state)
 
 
 
-    const data = props.location.state.myArrayVariableName
+  //  const data = props.location.state.myArrayVariableName
 
    // console.log(props.location.state.myArrayVariableName.id, "ashdliahd")
     //console.log(props.location.state.cart, "ashdliahd")
@@ -27,20 +27,21 @@ function ProductDetail(props) {
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <img src={props.location.state.myArrayVariableName.image} width="100%" id="ProductImg" />
+                
+                        <img src=  { (props.location.state) ?  props.location.state.myArrayVariableName.image : ''} width="100%" id="ProductImg" />
 
                     </div>
                     <div class="col-2">
 
-                        <h1>{props.location.state.myArrayVariableName.text}</h1>
-                        <h4><i className="fa fa-inr"></i> {props.location.state.myArrayVariableName.price}</h4>
+                        <h1>{(props.location.state) ? props.location.state.myArrayVariableName.text: ''}</h1>
+                        <h4><i className="fa fa-inr"></i> { (props.location.state) ?  props.location.state.myArrayVariableName.price : ''}</h4>
 
 
 
                         <NumericInput className = "quanti" onChange={setValue} min={1} value={value} />
 
-                        <button className = "btn" onClick = {(e) => {addToCart(e,props.location.id,props.location.state.myArrayVariableName.image ,props.location.state.myArrayVariableName.text,
-                         props.location.state.myArrayVariableName.price, value )}}>Add To Cart</button>
+                        <button className = "btn" onClick = {(e) => {(props.location.state) ? addToCart(e,props.location.id,props.location.state.myArrayVariableName.image ,props.location.state.myArrayVariableName.text,
+                         props.location.state.myArrayVariableName.price, value ) : ''}}>Add To Cart</button>
 
 
 
@@ -55,7 +56,7 @@ function ProductDetail(props) {
 
                         <h3>PRODUCT DETAILS <i class="fa fa-indent"></i></h3>
                         <br />
-                        <p>{props.location.state.myArrayVariableName.productDetails}</p>
+                        <p>{(props.location.state) ? props.location.state.myArrayVariableName.productDetails : ''}</p>
 
 
                     </div>

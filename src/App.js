@@ -13,6 +13,13 @@ function App() {
 
   const [loading, setLoading] = useState(false);
 
+  const [dis , setDis] = useState(false);
+
+  // const setDisplay = ()=>{
+  //   setDis(true);
+  // }
+
+
   useEffect(() => {
 
     // ReactGA.initialize('UA-199375039-1')
@@ -28,14 +35,25 @@ function App() {
     { loading ?
 
     (
-      <Loader>
-       <ClimbingBoxLoader color={"#FCA2A2"} loading={loading}  size={30} />
-       </Loader>
+
+      <div style = {{width : '100vw' , height : '100vh'}}>
+      <img src={require('./fire.gif').default}  style = {{width : '400px' , marginTop : '20vh' }} alt="loading..." />
+      </div>
+      
+ 
     )
 
     :
     (
-        <Terms/>
+      <HashRouter>
+
+            
+      
+
+        <Navbar />
+        <Terms dis = {dis} setDis = {setDis} />
+        <Footer/>
+      </HashRouter>
     )}
 
     </div>

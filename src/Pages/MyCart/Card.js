@@ -14,7 +14,7 @@ const Card = ({data}) => {
  
     
 
-    const tax = 35;
+  //  const tax = 35;
 
     let total = 0;
 
@@ -71,13 +71,13 @@ const Card = ({data}) => {
                             <td>Subtotal</td>
                             <td><i className="fa fa-inr"></i> {total}</td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                             <td>Tax</td>
                             <td><i className="fa fa-inr"></i> {tax}</td>
-                        </tr>
+                        </tr> */}
                         <tr>
                             <td>Total</td>
-                            <td><i className="fa fa-inr"></i> {total + tax}</td>
+                            <td><i className="fa fa-inr"></i> {total }</td>
                         </tr>
 
                     </table>
@@ -85,7 +85,7 @@ const Card = ({data}) => {
                 <div class="total-price">
 
                 <CustomizedDialogs >
-                    <ShippingForm data= {data} total = {total + tax}></ShippingForm>
+                    <ShippingForm data= {data} total = {total }></ShippingForm>
                 </CustomizedDialogs>
                     {/* <button className="btn">Proceed to checkout <i className="fa fa-inr"></i></button> */}
                 </div>
