@@ -11,7 +11,7 @@ export const Others = [
         star : 1,
         unstar : 4,
         price : 219,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
         
 
@@ -23,7 +23,7 @@ export const Others = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
 
 
@@ -35,7 +35,7 @@ export const Others = [
         star : 3,
         unstar : 2,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
         
         
@@ -48,7 +48,7 @@ export const Others = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love  Use it as keychain or tag it anywhere you want!'
         
 
@@ -60,7 +60,7 @@ export const Others = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love  Use it as keychain or tag it anywhere you want!'
 
 
@@ -73,7 +73,7 @@ export const Others = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
 
 
@@ -85,7 +85,7 @@ export const Others = [
         star : 3,
         unstar : 2,
         price : 799,
-        quantity : 3,
+        quantity : "IN STOCK",
         productDetails : 'Handmade resin ashtray made with love  Smoky design, gives sexy vibes. About 10cm in diameter(round)'
         
         
@@ -99,7 +99,7 @@ export const Others = [
         star : 3,
         unstar : 2,
         price : 1499,
-        quantity : 3,
+        quantity : "IN STOCK",
         productDetails : 'Handmade resin ashtray made with love   Smoky design, gives sexy vibes   About 12x10x3cm (lungs)'
         
         

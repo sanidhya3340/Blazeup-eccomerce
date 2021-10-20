@@ -8,7 +8,7 @@ export const ProductData = [
         star : 3,
         unstar : 2,
         price : 99,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : 'Each booklet contains 33 king size papers.420z papers, made from alfalfa ensure *slow and even burning*'
         
         
@@ -21,7 +21,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 199,
-        quantity : 15,
+        quantity : "IN STOCK",
         productDetails : '33 King size papers made from rice! This product comes with papers, tips and a foldable tray, to save the effort of finding base paper '
         
 
@@ -33,7 +33,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 39,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : '50 wide tips per booklet  Chlorine and chemical free tips to roll perfect doobies!',
 
 
@@ -45,7 +45,7 @@ export const ProductData = [
         star : 3,
         unstar : 2,
         price : 169,
-        quantity : 24,
+        quantity : "IN STOCK",
         productDetails : 'Winner Of The European Product Awards 2011  33 Chlorine free unbleached king size papers + 33 unbleached tips.'
         
         
@@ -57,7 +57,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 12,
+        quantity : "IN STOCK",
         productDetails : 'the perfect 3 in 1 kit you will ever need! 32 Unbleached papers, unbleached tips and filter that makes sure that nothing goes into the roach while you puff puff pass!'
         
 
@@ -69,7 +69,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 99,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : '32 ultra thin organic papers per booklet.  Choose from a variety of dope ass packs'
 
 
@@ -82,7 +82,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 199,
-        quantity : 12,
+        quantity : "IN STOCK",
         productDetails : 'Tobacco-free cones made from hemp.  2 blunts in a reusable pack.'
 
 
@@ -94,7 +94,7 @@ export const ProductData = [
         star : 3,
         unstar : 2,
         price : 119,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : '32 Premium unbleached papers to roll with class'
         
         
@@ -107,7 +107,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 39,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : '50 perforated tips per booklet.  don’t panic, its organic!'
         
 
@@ -119,7 +119,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 99,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : '32 Premium RAW quality papers with watermark that ensures slow steady burn.'
 
 
@@ -131,7 +131,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 109,
-        quantity : 50,
+        quantity : "IN STOCK",
         productDetails : 'Plant the tip into the soil before/after use to see an amarnath plant grow'
 
 
@@ -143,7 +143,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 139,
-        quantity : 24,
+        quantity : "IN STOCK",
         productDetails : '40 transparent papers made from cellulose. Its see-through build will make you drool over it!'
         
 
@@ -155,7 +155,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 369,
-        quantity : 15,
+        quantity : "IN STOCK",
         productDetails : 'RAW-thentic cones for all occasions! 1 x RAW Cone 1 1/4 (84 mm in length) 1 x RAW Cone King Size (109 mm) 1 x RAW Cone Party Size (140 mm) 1 x RAW Emperador (180 mm)  1 x RAW Supernatural (280 mm) Don’t let the party stop!!!!!!!!!!!!!'
         
 
@@ -187,7 +187,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 219,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
         
 
@@ -199,7 +199,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
 
 
@@ -211,7 +211,7 @@ export const ProductData = [
         star : 3,
         unstar : 2,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
         
         
@@ -224,7 +224,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love  Use it as keychain or tag it anywhere you want!'
         
 
@@ -236,7 +236,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love  Use it as keychain or tag it anywhere you want!'
 
 
@@ -249,7 +249,7 @@ export const ProductData = [
         star : 1,
         unstar : 4,
         price : 249,
-        quantity : 2,
+        quantity : "IN STOCK",
         productDetails : 'Each one is uniquely made with love Use it as keychain or tag it anywhere you want!'
 
 
@@ -261,7 +261,7 @@ export const ProductData = [
         star : 3,
         unstar : 2,
         price : 799,
-        quantity : 3,
+        quantity : "IN STOCK",
         productDetails : 'Handmade resin ashtray made with love  Smoky design, gives sexy vibes. About 10cm in diameter(round)'
         
         
@@ -275,7 +275,7 @@ export const ProductData = [
         star : 3,
         unstar : 2,
         price : 1499,
-        quantity : 3,
+        quantity : "IN STOCK",
         productDetails : 'Handmade resin ashtray made with love   Smoky design, gives sexy vibes   About 12x10x3cm (lungs)'
         
         
