@@ -10,7 +10,7 @@ function Terms1() {
                 </div>
                 <h2 style = {{color : "white"}}>Are You 18+</h2>
                
-                <input type="checkbox" onClick = {(e)=> (seecheck(e))} class="agree" name="agree"/>
+                <input type="checkbox" class="agree" name="agree"/>
             
               
             </div>
