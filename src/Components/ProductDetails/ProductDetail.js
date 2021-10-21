@@ -41,7 +41,7 @@ function ProductDetail(props) {
                         <NumericInput className = "quanti" onChange={setValue} min={1} value={value} />
 
                         <button className = "btn" onClick = {(e) => {(props.location.state) ? addToCart(e,props.location.id,props.location.state.myArrayVariableName.image ,props.location.state.myArrayVariableName.text,
-                         props.location.state.myArrayVariableName.price, value ) : ''}}>Add To Cart</button>
+                         props.location.state.myArrayVariableName.price, value ) : <div></div>}}>Add To Cart</button>
 
 
 
