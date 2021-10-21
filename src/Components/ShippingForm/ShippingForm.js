@@ -98,7 +98,7 @@ function ShippingForm({data , total}) {
                             <h1>Your Order Is Done Now Complete The Payment Process To Get Your Order</h1>
                             <h3>Kindely Note Down Your Full Amount Sent To Your Mail</h3>
 
-                            <a className="formSubmit b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" href="https://pages.razorpay.com/pl_I865j338eSXjat/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">Pay Now{total}</a>
+                            <a className="formSubmit b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" href={`https://pages.razorpay.com/pl_I865j338eSXjat/view?amount=${total}`} data-text="Pay Now" data-color="#528FF0" data-size="medium">Pay Now {total}</a>
                         </div>
                     )
                     }
