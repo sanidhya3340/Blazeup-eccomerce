@@ -3,3 +3,13 @@
         width: 30vw !important;
     }
 }
+
+.form-class{
+    /* background-color: black; */
+    background-color: #0D1117;
+    color: white;
+}
+
+.btn {
+    background-color: rgb(150, 146, 146);
+}
