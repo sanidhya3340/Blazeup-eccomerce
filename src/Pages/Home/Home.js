@@ -147,8 +147,8 @@ function Home() {
                         </div>
                         <div className="col-2 ">
                             <p>Coming Soon</p>
-                            <h1>Roll Up Originals</h1>
-                            <small >The extaordinary breathable hoddie which faishonable, trippy as well as good for your body. Will be available in both slim fit and and loose fit.</small>
+                            <h1>Blazeup Originals</h1>
+                            <small >The extaordinary breathable hoddie which is faishonable, trippy as well as good for your body. This will be available in both slim fit and and loose fit.</small>
                             <br />
                             <Link to="/Product" replace
                                 style={{
@@ -177,7 +177,7 @@ function Home() {
                            <i className="fa fa-star-o"></i>
                        </div>
                        <img src={require('./Image/user-1.png').default} alt=""/>
-                       <h3>Ashu</h3>
+                       <h3>Milan</h3>
            </div>
             <div className="col-3">
                     <i className="fa fa-quote-left"></i>
