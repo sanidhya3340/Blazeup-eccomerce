@@ -9,12 +9,13 @@ import './Product.css'
 import _ from "lodash";
 import { Link } from 'react-router-dom';
 import Scroll from '../../Components/Scroll/Scroll';
+// import { CodeSharp } from '@material-ui/icons';
 
 
 function Product(props) {
 
 
-    
+    console.log(ProductData)
 
     let append = props.appendCart;
     console.log(append ,"cart")
@@ -39,7 +40,7 @@ function Product(props) {
             };
 
             const sortProperty = types[type];
-            console.log(sortProperty);
+            // console.log(sortProperty);
 
             if(type === 'Low_To_High'){
                  sorted = [...ProductData].sort((a, b) =>
@@ -95,8 +96,8 @@ function Product(props) {
 
 
                                 <div class="col-4" >
-
-                                    <img loading="lazy" src={item.image} />
+                                    {/* {console.log(item.image2)} */}
+                                    <img loading="lazy" alt="" src={item.image} />
                                     <h4>{item.text}</h4>
                                     <div class="rating">
 
@@ -113,9 +114,6 @@ function Product(props) {
                                     <p className = "white"> Quantity :  {item.quantity}</p>
                                 </div>
                             </Link>
-                        
-
-
                             </>
                 )
                     })}

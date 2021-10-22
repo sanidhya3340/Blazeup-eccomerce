@@ -1,51 +1,81 @@
-import React, { useState,useContext } from 'react'
+import React, { useState, useContext } from "react";
 
-import './ProductDetail.css'
-import NumericInput from 'react-numeric-input';
-
-import Card from '../../Pages/Home/Card';
-import { Link } from 'react-router-dom'
-import { CartContext } from '../Navbar/Navbar';
+import "./ProductDetail.css";
+import NumericInput from "react-numeric-input";
+import Corousel from "../Corousel/Corousel";
+// import Card from "../../Pages/Home/Card";
+// import { Link } from "react-router-dom";
+import { CartContext } from "../Navbar/Navbar";
 
 function ProductDetail(props) {
+  const { item, addToCart } = useContext(CartContext);
 
-    const {item,addToCart} = useContext(CartContext);
-    
-    const [value,setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
-    console.log(props.location.state)
-
-
+  console.log(props.location.state);
 
   //  const data = props.location.state.myArrayVariableName
 
-   // console.log(props.location.state.myArrayVariableName.id, "ashdliahd")
-    //console.log(props.location.state.cart, "ashdliahd")
-    //console.log(props.location.state, "ashdliahd")
-    return (
-        <div >
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-2">
-                
-                        <img src=  { (props.location.state) ?  props.location.state.myArrayVariableName.image : ''} width="100%" id="ProductImg" />
+  // console.log(props.location.state.myArrayVariableName.id, "ashdliahd")
+  //console.log(props.location.state.cart, "ashdliahd")
+  //console.log(props.location.state, "ashdliahd")
+  return (
+    <div>
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <Corousel slides = {props.location.state.myArrayVariableName.images} />
+            {/* <img
+              src={
+                props.location.state
+                  ? props.location.state.myArrayVariableName.image
+                  : ""
+              }
+              width="100%"
+              id="ProductImg"
+            /> */}
+          </div>
+          <div class="col-2">
+            <h1>
+              {props.location.state
+                ? props.location.state.myArrayVariableName.text
+                : ""}
+            </h1>
+            <h4>
+              <i className="fa fa-inr"></i>{" "}
+              {props.location.state
+                ? props.location.state.myArrayVariableName.price
+                : ""}
+            </h4>
 
-                    </div>
-                    <div class="col-2">
+            <NumericInput
+              className="quanti"
+              onChange={setValue}
+              min={1}
+              value={value}
+            />
 
-                        <h1>{(props.location.state) ? props.location.state.myArrayVariableName.text: ''}</h1>
-                        <h4><i className="fa fa-inr"></i> { (props.location.state) ?  props.location.state.myArrayVariableName.price : ''}</h4>
+            <button
+              className="btn"
+              onClick={(e) => {
+                props.location.state ? (
+                  addToCart(
+                    e,
+                    props.location.id,
+                    props.location.state.myArrayVariableName.image,
+                    props.location.state.myArrayVariableName.text,
+                    props.location.state.myArrayVariableName.price,
+                    value
+                  )
+                ) : (
+                  <div></div>
+                );
+              }}
+            >
+              Add To Cart
+            </button>
 
-
-
-                        <NumericInput className = "quanti" onChange={setValue} min={1} value={value} />
-
-                        <button className = "btn" onClick = {(e) => {(props.location.state) ? addToCart(e,props.location.id,props.location.state.myArrayVariableName.image ,props.location.state.myArrayVariableName.text,
-                         props.location.state.myArrayVariableName.price, value ) : <div></div>}}>Add To Cart</button>
-
-
-
-                       {/* <Link to = {{
+            {/* <Link to = {{
                             pathname: '/MyCart',
                                     state: {item: data,quanti: value}
                                     
@@ -54,19 +84,20 @@ function ProductDetail(props) {
                                 textDecoration: 'none'
                             }}  class="btn"> Add To Cart</Link> */}
 
-                        <h3>PRODUCT DETAILS <i class="fa fa-indent"></i></h3>
-                        <br />
-                        <p>{(props.location.state) ? props.location.state.myArrayVariableName.productDetails : ''}</p>
+            <h3>
+              PRODUCT DETAILS <i class="fa fa-indent"></i>
+            </h3>
+            <br />
+            <p>
+              {props.location.state
+                ? props.location.state.myArrayVariableName.productDetails
+                : ""}
+            </p>
+          </div>
+        </div>
+      </div>
 
-
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            {/* <h2 className="title">Related Products</h2>
+      {/* <h2 className="title">Related Products</h2>
             <div className="latestProduct">
                 <button className="leftSlider" onClick={()=>leftSlider(0)}><i class="fa fa-angle-left" aria-hidden="true"></i></button>
                 <div className="latestRow">
@@ -75,9 +106,8 @@ function ProductDetail(props) {
                 </div>
                 <button className="rightSlider" onClick={()=>rightSlider(0)}><i class="fa fa-angle-right" aria-hidden="true"></i></button>
             </div> */}
-        </div>
-
-    )
+    </div>
+  );
 }
 
-export default ProductDetail
+export default ProductDetail;
