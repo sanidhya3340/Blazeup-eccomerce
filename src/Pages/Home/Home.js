@@ -177,7 +177,7 @@ function Home() {
                            <i className="fa fa-star-o"></i>
                        </div>
                        <img src={require('./Image/user-1.png').default} alt=""/>
-                       <h3>Ashu</h3>
+                       <h3>Milan</h3>
            </div>
             <div className="col-3">
                     <i className="fa fa-quote-left"></i>
